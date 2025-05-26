@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Avian OS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico">
+    <style>
+        .error-page {
+            padding: 5rem 0;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+        
+        .error-message {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .error-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        
+        .error-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/avian-logo.svg" alt="Avian OS Logo">
+                <h1>Avian OS</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#download">Download</a></li>
+                    <li><a href="index.html#documentation">Documentation</a></li>
+                    <li><a href="index.html#community">Community</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="error-page">
+        <div class="container">
+            <div class="error-code">404</div>
+            <h1 class="error-message">Page Not Found</h1>
+            <p class="error-description">The page you're looking for doesn't exist or has been moved. Don't worry, you can find your way back to our homepage or check out some of these popular pages:</p>
+            
+            <div class="error-links">
+                <a href="index.html" class="btn btn-primary">Go to Homepage</a>
+                <a href="downloads/" class="btn btn-secondary">Download Avian OS</a>
+            </div>
+            
+            <div class="error-links">
+                <a href="docs/installation.html">Installation Guide</a>
+                <a href="docs/">Documentation</a>
+                <a href="index.html#community">Community</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <img src="images/avian-logo.svg" alt="Avian OS Logo">
+                    <p>Avian OS - A lightweight Linux distribution</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#download">Download</a></li>
+                        <li><a href="index.html#documentation">Documentation</a></li>
+                        <li><a href="index.html#community">Community</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for updates and news.</p>
+                    <form action="/subscribe" method="post">
+                        <input type="email" name="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Avian OS. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/avian-os"><img src="images/icons/github.svg" alt="GitHub"></a>
+                    <a href="https://twitter.com/avian_os"><img src="images/icons/twitter.svg" alt="Twitter"></a>
+                    <a href="https://facebook.com/avian-os"><img src="images/icons/facebook.svg" alt="Facebook"></a>
+                    <a href="https://instagram.com/avian_os"><img src="images/icons/instagram.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

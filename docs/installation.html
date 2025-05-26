@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avian OS Installation Guide</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../images/avian-logo.svg" alt="Avian OS Logo">
+                <h1>Avian OS</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#features">Features</a></li>
+                    <li><a href="../index.html#download">Download</a></li>
+                    <li><a href="../index.html#documentation">Documentation</a></li>
+                    <li><a href="../index.html#community">Community</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="documentation-page">
+        <div class="container">
+            <h1>Avian OS Installation Guide</h1>
+            
+            <div class="doc-navigation">
+                <ul>
+                    <li><a href="#requirements">System Requirements</a></li>
+                    <li><a href="#preparation">Preparation</a></li>
+                    <li><a href="#installation">Installation Steps</a></li>
+                    <li><a href="#post-installation">Post-Installation</a></li>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                </ul>
+            </div>
+            
+            <div class="doc-content">
+                <section id="requirements">
+                    <h2>System Requirements</h2>
+                    <p>Before installing Avian OS, make sure your system meets the following requirements:</p>
+                    
+                    <div class="requirements-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Minimum</th>
+                                    <th>Recommended</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Processor</td>
+                                    <td>1 GHz dual-core</td>
+                                    <td>2 GHz quad-core or better</td>
+                                </tr>
+                                <tr>
+                                    <td>Memory (RAM)</td>
+                                    <td>2 GB</td>
+                                    <td>4 GB or more</td>
+                                </tr>
+                                <tr>
+                                    <td>Storage</td>
+                                    <td>20 GB</td>
+                                    <td>40 GB or more</td>
+                                </tr>
+                                <tr>
+                                    <td>Graphics</td>
+                                    <td>VGA capable of 1024x768</td>
+                                    <td>Graphics card with 3D acceleration</td>
+                                </tr>
+                                <tr>
+                                    <td>Boot</td>
+                                    <td>UEFI or Legacy BIOS</td>
+                                    <td>UEFI with Secure Boot support</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <section id="preparation">
+                    <h2>Preparation</h2>
+                    
+                    <h3>1. Download Avian OS</h3>
+                    <p>First, download the Avian OS ISO file from our <a href="../downloads/">downloads page</a>.</p>
+                    
+                    <h3>2. Create a Bootable USB Drive</h3>
+                    <p>You'll need to create a bootable USB drive to install Avian OS. Here's how to do it on different operating systems:</p>
+                    
+                    <div class="tabs">
+                        <div class="tab-headers">
+                            <button class="tab-btn active" data-tab="windows">Windows</button>
+                            <button class="tab-btn" data-tab="macos">macOS</button>
+                            <button class="tab-btn" data-tab="linux">Linux</button>
+                        </div>
+                        
+                        <div class="tab-content active" id="windows">
+                            <p>On Windows, we recommend using Rufus or Etcher:</p>
+                            <ol>
+                                <li>Download <a href="https://rufus.ie/" target="_blank">Rufus</a> or <a href="https://www.balena.io/etcher/" target="_blank">Etcher</a></li>
+                                <li>Insert your USB drive (at least 4GB)</li>
+                                <li>Open Rufus or Etcher</li>
+                                <li>Select the Avian OS ISO file</li>
+                                <li>Select your USB drive</li>
+                                <li>Click "Start" or "Flash" and wait for the process to complete</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="tab-content" id="macos">
+                            <p>On macOS, we recommend using Etcher:</p>
+                            <ol>
+                                <li>Download <a href="https://www.balena.io/etcher/" target="_blank">Etcher</a></li>
+                                <li>Insert your USB drive (at least 4GB)</li>
+                                <li>Open Etcher</li>
+                                <li>Select the Avian OS ISO file</li>
+                                <li>Select your USB drive</li>
+                                <li>Click "Flash" and wait for the process to complete</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="tab-content" id="linux">
+                            <p>On Linux, you can use Etcher or the dd command:</p>
+                            <ol>
+                                <li>Using Etcher:
+                                    <ul>
+                                        <li>Download <a href="https://www.balena.io/etcher/" target="_blank">Etcher</a></li>
+                                        <li>Insert your USB drive (at least 4GB)</li>
+                                        <li>Open Etcher</li>
+                                        <li>Select the Avian OS ISO file</li>
+                                        <li>Select your USB drive</li>
+                                        <li>Click "Flash" and wait for the process to complete</li>
+                                    </ul>
+                                </li>
+                                <li>Using dd command:
+                                    <ul>
+                                        <li>Insert your USB drive (at least 4GB)</li>
+                                        <li>Open a terminal</li>
+                                        <li>Find your USB drive with <code>lsblk</code> (e.g., /dev/sdb)</li>
+                                        <li>Run: <code>sudo dd bs=4M if=path/to/avian-os.iso of=/dev/sdX status=progress oflag=sync</code> (replace /dev/sdX with your USB drive)</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <h3>3. Backup Your Data</h3>
+                    <p>Before installing any operating system, it's always a good idea to back up your important data.</p>
+                    
+                    <h3>4. Prepare Your System</h3>
+                    <p>If you plan to dual-boot with another operating system, make sure you have free space on your hard drive or create a new partition.</p>
+                </section>
+                
+                <section id="installation">
+                    <h2>Installation Steps</h2>
+                    
+                    <h3>1. Boot from USB</h3>
+                    <ol>
+                        <li>Insert the bootable USB drive into your computer</li>
+                        <li>Restart your computer</li>
+                        <li>Enter your computer's boot menu (usually by pressing F12, F2, or Esc during startup)</li>
+                        <li>Select your USB drive from the boot menu</li>
+                    </ol>
+                    
+                    <h3>2. Start the Installation</h3>
+                    <ol>
+                        <li>Once Avian OS boots, you'll see the welcome screen</li>
+                        <li>Select "Install Avian OS"</li>
+                        <li>Choose your language, time zone, and keyboard layout</li>
+                    </ol>
+                    
+                    <h3>3. Disk Partitioning</h3>
+                    <p>You'll be presented with several installation options:</p>
+                    <ul>
+                        <li><strong>Install alongside existing OS</strong>: This will set up a dual-boot system</li>
+                        <li><strong>Erase disk and install</strong>: This will erase everything on your disk and install Avian OS</li>
+                        <li><strong>Something else</strong>: This allows you to manually configure partitions</li>
+                    </ul>
+                    
+                    <div class="note">
+                        <p><strong>Note:</strong> If you choose "Erase disk and install", all data on the selected disk will be permanently deleted.</p>
+                    </div>
+                    
+                    <h3>4. Create User Account</h3>
+                    <ol>
+                        <li>Enter your name</li>
+                        <li>Choose a computer name</li>
+                        <li>Create a username</li>
+                        <li>Set a strong password</li>
+                        <li>Choose whether to log in automatically or require a password</li>
+                    </ol>
+                    
+                    <h3>5. Installation Process</h3>
+                    <ol>
+                        <li>Review your choices and click "Install"</li>
+                        <li>The installation will begin and may take 10-20 minutes depending on your hardware</li>
+                        <li>Once complete, you'll be prompted to restart your computer</li>
+                    </ol>
+                </section>
+                
+                <section id="post-installation">
+                    <h2>Post-Installation</h2>
+                    
+                    <h3>1. First Boot</h3>
+                    <p>After restarting, you'll be greeted with the login screen. Enter the username and password you created during installation.</p>
+                    
+                    <h3>2. Update Your System</h3>
+                    <p>It's important to update your system to get the latest security patches and software updates:</p>
+                    <div class="code-block">
+                        <pre><code>sudo apt update
+sudo apt upgrade</code></pre>
+                    </div>
+                    
+                    <h3>3. Install Additional Software</h3>
+                    <p>Avian OS comes with essential software pre-installed, but you can install additional software from the Software Center or using the command line.</p>
+                    
+                    <h3>4. Configure System Settings</h3>
+                    <p>Take some time to configure your system settings according to your preferences:</p>
+                    <ul>
+                        <li>Appearance and themes</li>
+                        <li>Display settings</li>
+                        <li>Power management</li>
+                        <li>Network connections</li>
+                        <li>User accounts</li>
+                    </ul>
+                </section>
+                
+                <section id="troubleshooting">
+                    <h2>Troubleshooting</h2>
+                    
+                    <h3>Boot Issues</h3>
+                    <p>If you're having trouble booting from the USB drive:</p>
+                    <ul>
+                        <li>Make sure your computer is set to boot from USB in the BIOS/UEFI settings</li>
+                        <li>Try disabling Secure Boot in your BIOS/UEFI settings</li>
+                        <li>Try recreating the bootable USB drive with a different tool</li>
+                    </ul>
+                    
+                    <h3>Display Issues</h3>
+                    <p>If you experience display problems during or after installation:</p>
+                    <ul>
+                        <li>Try booting with the "Safe Graphics" option from the boot menu</li>
+                        <li>Add the <code>nomodeset</code> parameter to the kernel boot options</li>
+                    </ul>
+                    
+                    <h3>Network Issues</h3>
+                    <p>If you're having trouble connecting to the internet:</p>
+                    <ul>
+                        <li>Check your network hardware is properly connected</li>
+                        <li>Try using a wired connection if possible</li>
+                        <li>Some wireless adapters may require additional drivers</li>
+                    </ul>
+                    
+                    <h3>Getting Help</h3>
+                    <p>If you encounter any issues not covered here, please visit our <a href="../index.html#community">Community</a> page for support.</p>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <img src="../images/avian-logo.svg" alt="Avian OS Logo">
+                    <p>Avian OS - A lightweight Linux distribution</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html#features">Features</a></li>
+                        <li><a href="../index.html#download">Download</a></li>
+                        <li><a href="../index.html#documentation">Documentation</a></li>
+                        <li><a href="../index.html#community">Community</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../faq.html">FAQ</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for updates and news.</p>
+                    <form action="/subscribe" method="post">
+                        <input type="email" name="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Avian OS. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/avian-os"><img src="../images/icons/github.svg" alt="GitHub"></a>
+                    <a href="https://twitter.com/avian_os"><img src="../images/icons/twitter.svg" alt="Twitter"></a>
+                    <a href="https://facebook.com/avian-os"><img src="../images/icons/facebook.svg" alt="Facebook"></a>
+                    <a href="https://instagram.com/avian_os"><img src="../images/icons/instagram.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Tab functionality for the installation guide
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avian OS Downloads</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../images/avian-logo.svg" alt="Avian OS Logo">
+                <h1>Avian OS</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#features">Features</a></li>
+                    <li><a href="../index.html#download">Download</a></li>
+                    <li><a href="../index.html#documentation">Documentation</a></li>
+                    <li><a href="../index.html#community">Community</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="download-page">
+        <div class="container">
+            <h1>Download Avian OS</h1>
+            <p>Thank you for your interest in Avian OS! Our ISO files are hosted on our official download servers.</p>
+            
+            <div class="download-options">
+                <div class="download-card">
+                    <h3>Avian OS Standard</h3>
+                    <p>Recommended for most users. Includes a full desktop environment and essential applications.</p>
+                    <ul>
+                        <li>Based on Ubuntu</li>
+                        <li>Full desktop environment</li>
+                        <li>Pre-installed applications</li>
+                    </ul>
+                    <a href="https://github.com/avian-os/releases/latest/download/avian-os-ubuntu.iso" class="btn btn-primary">Download (64-bit)</a>
+                </div>
+                
+                <div class="download-card">
+                    <h3>Avian OS Lite</h3>
+                    <p>Minimal installation for older hardware or users who prefer a lightweight system.</p>
+                    <ul>
+                        <li>Minimal desktop environment</li>
+                        <li>Lower system requirements</li>
+                        <li>Faster performance</li>
+                    </ul>
+                    <a href="https://github.com/avian-os/releases/latest/download/avian-os-lite.iso" class="btn btn-primary">Download (64-bit)</a>
+                </div>
+                
+                <div class="download-card">
+                    <h3>Avian OS Security</h3>
+                    <p>Security-focused distribution with penetration testing and security tools.</p>
+                    <ul>
+                        <li>Based on Kali Linux</li>
+                        <li>Security and penetration tools</li>
+                        <li>Advanced security features</li>
+                    </ul>
+                    <a href="https://github.com/avian-os/releases/latest/download/avian-os-kali.iso" class="btn btn-primary">Download (64-bit)</a>
+                </div>
+            </div>
+            
+            <div class="download-info">
+                <h2>Download Information</h2>
+                <p>All ISO files are approximately 2-3 GB in size. Make sure you have a stable internet connection before downloading.</p>
+                
+                <h3>Verifying Downloads</h3>
+                <p>For security, we recommend verifying the integrity of your downloaded ISO files using the SHA256 checksums provided below:</p>
+                
+                <div class="code-block">
+                    <pre><code>avian-os-ubuntu.iso: e8a4a01d67a7951c57b69d0d802b5c40a5c5c8a3b8fad4d0f7744a5f9258c8a2
+avian-os-lite.iso: 3f7d5b43f2c39c9f40b8c2b0bee059b456a2c8a3b8fad4d0f7744a5f9258c8a2
+avian-os-kali.iso: 9a2c8a3b8fad4d0f7744a5f9258c8a2e8a4a01d67a7951c57b69d0d802b5c40a</code></pre>
+                </div>
+                
+                <p>To verify your download on Linux or macOS, use the following command:</p>
+                <div class="code-block">
+                    <pre><code>sha256sum avian-os-ubuntu.iso</code></pre>
+                </div>
+                
+                <p>On Windows, use PowerShell:</p>
+                <div class="code-block">
+                    <pre><code>Get-FileHash -Algorithm SHA256 avian-os-ubuntu.iso</code></pre>
+                </div>
+                
+                <h3>Installation Instructions</h3>
+                <p>For detailed installation instructions, please refer to our <a href="../docs/installation.html">Installation Guide</a>.</p>
+                
+                <h3>Older Versions</h3>
+                <p>Looking for older versions? Check our <a href="https://github.com/avian-os/releases">releases archive</a>.</p>
+                
+                <h3>Having Trouble?</h3>
+                <p>If you're experiencing issues with the download, please visit our <a href="../index.html#community">Community</a> page for support.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <img src="../images/avian-logo.svg" alt="Avian OS Logo">
+                    <p>Avian OS - A lightweight Linux distribution</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html#features">Features</a></li>
+                        <li><a href="../index.html#download">Download</a></li>
+                        <li><a href="../index.html#documentation">Documentation</a></li>
+                        <li><a href="../index.html#community">Community</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../faq.html">FAQ</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for updates and news.</p>
+                    <form action="/subscribe" method="post">
+                        <input type="email" name="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Avian OS. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/avian-os"><img src="../images/icons/github.svg" alt="GitHub"></a>
+                    <a href="https://twitter.com/avian_os"><img src="../images/icons/twitter.svg" alt="Twitter"></a>
+                    <a href="https://facebook.com/avian-os"><img src="../images/icons/facebook.svg" alt="Facebook"></a>
+                    <a href="https://instagram.com/avian_os"><img src="../images/icons/instagram.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
