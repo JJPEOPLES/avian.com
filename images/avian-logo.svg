@@ -1,0 +1,26 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <style>
+      .bird-body { fill: #1e88e5; }
+      .nest { fill: #795548; }
+      .egg-arch { fill: #2196f3; }
+      .egg-manjaro { fill: #43a047; }
+      .egg-endeavour { fill: #7e57c2; }
+      .egg-garuda { fill: #26c6da; }
+    </style>
+  </defs>
+  
+  <!-- Nest -->
+  <ellipse class="nest" cx="400" cy="600" rx="250" ry="80"/>
+  <!-- Blue Bird -->
+  <path class="bird-body" d="M300,400 Q270,350 320,320 Q280,270 330,250 Q380,220 420,250 Q480,250 500,320 Q530,330 520,360 Q500,400 460,400 Q440,420 410,430 Q370,440 330,420 Q310,410 300,400 Z"/>
+  
+  <!-- Eggs / Smaller OSs -->
+  <circle class="egg-arch" cx="340" cy="590" r="20"/>
+  <circle class="egg-manjaro" cx="370" cy="610" r="18"/>
+  <circle class="egg-endeavour" cx="410" cy="600" r="22"/>
+  <circle class="egg-garuda" cx="450" cy="620" r="17"/>
+  <!-- Beak Feeding -->
+  <line x1="410" y1="430" x2="390" y2="470" stroke="#ffca28" stroke-width="5" />
+  <circle cx="390" cy="470" r="5" fill="#ffca28" />
+</svg>
